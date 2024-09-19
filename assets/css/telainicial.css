@@ -25,10 +25,13 @@ body {
 }
 
 .menu-items {
+  font-family: "Jockey One", sans-serif;
+  font-style: normal;
+  font-weight: 400;
   display: flex;
   justify-content: center;
   flex-grow: 1;
-  gap: 40px;
+  gap: 80px;
 }
 
 h2 {
@@ -42,56 +45,140 @@ h2 {
 }
 
 #contato {
-  background-color: #FFC805;  
+  background-color: #ffc805;
   border-radius: 20px;
   padding: 0px 13px 0px 10px;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 #textoInicial {
-    padding-top: 20vh;
-    font-size: 6vh;
-    padding-left: 10vh;
-    color: white;
+  font-family: Jockey-one;
+  font-weight: 300;
+  font-style: normal;
+  padding-top: 8vh;
+  font-size: 7vh;
+  padding-left: 10vh;
+  color: white;
+  filter: drop-shadow(9px 1px 2px rgba(0, 0, 0, 0.541));
 }
 
-@media (max-width: 768px) {
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+#hamburguer {
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 55vh;
+  background-color: #ffc805;
+  border-radius: 3px;
+  position: relative;
+  box-shadow: 6px 0px 9px -4px rgba(19, 19, 19, 0.623);
+}
+
+#cruz {
+  height: 37px;
+  width: 10px;
+  background-color: white;
+  position: absolute;
+  top: 18%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+#cruz2 {
+  height: 37px;
+  width: 10px;
+  background-color: white;
+  position: absolute;
+  top: 15%; 
+  left: 94.6%; 
+  border-radius: 10px;
+  transform: rotate(90deg);
+}
+
+@media (max-width: 450px) {
+
+  body {
+    background-image: url(/assets/img/tela\ de\ fundo\,\ tela\ inicial.png);
+    background-repeat: no-repeat;
+    background-size: 100em 100em;
+    background-attachment: fixed;
+  }
+
   #logo {
     width: 10vh;
   }
 
   .navbar {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 10px;
+    gap: 10px;
+    padding: 10px 0;
   }
 
   .menu-items {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 480px) {
-  #logo {
-    width: 10vh;
-  }
-
-  .menu-items {
+    display: flex;
     flex-direction: row;
-    padding-top: 10px;
-    gap: 15px;
+    gap: 20px;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 4vh;
+  }
+
+  #textoInicial {
+    padding-top: 1em;
+    font-size: 1.6em;
+    padding-left: 0.5em;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px; 
+  }
+
+  #hamburguer {
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 17em;
+    background-color: #ffc805;
+    border-radius: 3px;
+    box-shadow: 6px 0px 9px -4px rgba(19, 19, 19, 0.623);
+  }
+
+  #cruz {
+    height: 37px;
+    width: 10px;
+    background-color: white;
+    position: absolute;
+    top: 53%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+  }
+
+  #cruz2 {
+    height: 37px;
+    width: 10px;
+    background-color: white;
+    position: absolute;
+    top: 50.5%; 
+    left: 73.5%; 
+    border-radius: 10px;
+    transform: rotate(90deg);
   }
 }
