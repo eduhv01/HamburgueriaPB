@@ -4,17 +4,50 @@
   box-sizing: border-box;
 }
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ca0000fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; 
+}
+
+@keyframes s2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+#preloader.hidden {
+  display: none;
+}
+
+.custom-loader {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:8px solid;
+  border-color:#ffffff;
+  border-right-color: #FFC800;
+  animation:s2 1s infinite linear;
+}
+@keyframes s2 {to{transform: rotate(1turn)}}
+
 body {
-  background-image: url(/assets/img/tela\ de\ fundo\,\ tela\ inicial.png);
+  background-image: url(/assets/img/Wallpaper\ computadores.png);
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
   background-attachment: fixed;
 }
 
 #logo {
-  width: 14vh;
-  filter: drop-shadow(1px 2px 3px rgb(31, 31, 31));
-  margin: 0;
+  width: 13vh;
+  margin-left: 1vh;
 }
 
 .navbar {
@@ -25,13 +58,14 @@ body {
 }
 
 .menu-items {
-  font-family: "Jockey One", sans-serif;
-  font-style: normal;
+  font-family: "Krona One", sans-serif;
   font-weight: 400;
+  font-style: normal;
   display: flex;
+  margin-top: 1.5vh;
   justify-content: center;
   flex-grow: 1;
-  gap: 80px;
+  gap: 70px;
 }
 
 h2 {
@@ -45,7 +79,7 @@ h2 {
 }
 
 #contato {
-  background-color: #ffc805;
+  background-color: #ffc800;
   border-radius: 20px;
   padding: 0px 13px 0px 10px;
 }
@@ -56,10 +90,9 @@ a {
 }
 
 #textoInicial {
-  font-family: Jockey-one;
-  font-weight: 300;
+  font-family: "Jockey One", sans-serif;
   font-style: normal;
-  padding-top: 8vh;
+  padding-top: 10vh;
   font-size: 7vh;
   padding-left: 10vh;
   color: white;
@@ -72,10 +105,10 @@ a {
 }
 
 #hamburguer {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-right: 20px;
   width: 55vh;
-  background-color: #ffc805;
+  background-color: #ffc800;
   border-radius: 3px;
   position: relative;
   box-shadow: 6px 0px 9px -4px rgba(19, 19, 19, 0.623);
@@ -106,7 +139,7 @@ a {
 @media (max-width: 450px) {
 
   body {
-    background-image: url(/assets/img/tela\ de\ fundo\,\ tela\ inicial.png);
+    background-image: url(/assets/img/Wallpaper\ computadores.png);
     background-repeat: no-repeat;
     background-size: 100em 100em;
     background-attachment: fixed;
@@ -145,15 +178,14 @@ a {
   }
 
   .main {
-    display: flex;
     flex-direction: column;
     align-items: center; 
     gap: 20px; 
   }
 
   #hamburguer {
-    margin-top: 20px;
-    margin-right: 20px;
+    top: 10px;
+    margin: 0 auto;
     width: 17em;
     background-color: #ffc805;
     border-radius: 3px;
