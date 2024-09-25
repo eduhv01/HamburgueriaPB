@@ -81,7 +81,7 @@ h2 {
 #contato {
   background-color: #ffc800;
   border-radius: 20px;
-  padding: 0px 13px 0px 10px;
+  padding: 0px 5px;
 }
 
 a {
@@ -105,35 +105,13 @@ a {
 }
 
 #hamburguer {
-  margin-top: 30px;
+  margin-top: 38px;
   margin-right: 20px;
   width: 55vh;
   background-color: #ffc800;
   border-radius: 3px;
   position: relative;
   box-shadow: 6px 0px 9px -4px rgba(19, 19, 19, 0.623);
-}
-
-#cruz {
-  height: 37px;
-  width: 10px;
-  background-color: white;
-  position: absolute;
-  top: 18%;
-  left: 95%;
-  transform: translate(-50%, -50%);
-  border-radius: 10px;
-}
-
-#cruz2 {
-  height: 37px;
-  width: 10px;
-  background-color: white;
-  position: absolute;
-  top: 15%; 
-  left: 94.6%; 
-  border-radius: 10px;
-  transform: rotate(90deg);
 }
 
 @media (max-width: 450px) {
@@ -160,15 +138,28 @@ a {
 
   .menu-items {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    font-size: 1rem;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
     align-items: center;
   }
 
+  #contato {
+    padding: 0px 5px;
+  }
+
+  .menu-items h2:nth-child(1),
+  .menu-items h2:nth-child(2) {
+    width: 48%; 
+  }
+
+  .menu-items h2:nth-child(3) {
+    width: 100%;
+  }
+
   h2 {
     font-size: 4vh;
+    text-align: center; 
   }
 
   #textoInicial {
@@ -190,27 +181,5 @@ a {
     background-color: #ffc805;
     border-radius: 3px;
     box-shadow: 6px 0px 9px -4px rgba(19, 19, 19, 0.623);
-  }
-
-  #cruz {
-    height: 37px;
-    width: 10px;
-    background-color: white;
-    position: absolute;
-    top: 53%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
-  }
-
-  #cruz2 {
-    height: 37px;
-    width: 10px;
-    background-color: white;
-    position: absolute;
-    top: 50.5%; 
-    left: 73.5%; 
-    border-radius: 10px;
-    transform: rotate(90deg);
   }
 }

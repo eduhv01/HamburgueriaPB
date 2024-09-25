@@ -1,39 +1,267 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ca0000fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+@keyframes s2 {
+  to {
+    transform: rotate(1turn);
   }
-  
-  #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ca0000fb;
+}
+
+#preloader.hidden {
+  display: none;
+}
+
+.custom-loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #ffffff;
+  border-right-color: #ffc800;
+  animation: s2 1s infinite linear;
+}
+@keyframes s2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+body {
+  background-image: url(/assets/img/Wallpaper\ computadores.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+}
+
+#logo {
+  width: 13vh;
+  margin-left: 1vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.menu-items {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  margin-top: 1.5vh;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 70px;
+}
+
+h2 {
+  font-size: 5vh;
+  margin: 0;
+  color: white;
+}
+
+#inicial {
+  text-decoration: underline;
+}
+
+#contato {
+  background-color: #ffc800;
+  border-radius: 20px;
+  padding: 0px 13px 0px 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.contatos {
+  color: white;
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 43px;
+}
+
+#h1Contato {
+  padding-top: 35px;
+}
+
+#h2Numero {
+  padding-top: 20px;
+}
+
+#numero {
+  font-size: 15px;
+  padding-top: 8px;
+}
+
+#h2Endereco {
+  padding-top: 20px;
+}
+
+#endereco {
+  font-size: 15px;
+  padding-top: 8px;
+}
+
+#h2Horarios {
+  padding-top: 20px;
+  opacity: 20px;
+}
+
+#horario1 {
+  font-size: 15px;
+  padding-top: 8px;
+}
+
+#horario2 {
+  font-size: 15px;
+  padding-top: 13px;
+}
+
+.fa-solid {
+  font-size: 23px;
+}
+
+.icon {
+  margin-right: 10px; 
+  vertical-align: middle; 
+  font-size: 0.9em; 
+  opacity: 0.8; 
+}
+
+.icon:hover {
+  opacity: 2; 
+  transition: opacity 0.2s ease; 
+}
+
+.minhaTela {
+  display: flex;
+}
+
+.form-container {
+  margin-top: 42px;
+  margin-left: 22em;
+  flex-direction: column;
+  width: 30em;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px 10px 20px;
+  border-radius: 7px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); 
+  z-index: 1000; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+  font-family: "Krona One", sans-serif;
+  font-size: 1.2em;
+  color: #000;
+}
+
+input, textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+button {
+  padding: 10px;
+  background-color: #ca0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Krona One", sans-serif;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: #ffc800;
+  transition: 0.5s;
+}
+
+#mensagemDeAgradecimento {
+  color: #ca0000;
+}
+
+.opcoes-avaliacao {
+    display: flex; 
+    margin-top: 10px;
+}
+
+#critica {
+  margin-left: 10px;
+}
+
+.radioOpcao {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+@media (max-width: 450px) {
+
+  body {
+    background-image: url(/assets/img/Wallpaper\ computadores.png);
+    background-repeat: no-repeat;
+    background-size: 100em 100em;
+    background-attachment: fixed;
+  }
+
+  #logo {
+    width: 10vh;
+  }
+
+  .navbar {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 1rem;
     justify-content: center;
     align-items: center;
-    z-index: 9999; 
   }
-  
-  @keyframes s2 {
-    to {
-      transform: rotate(1turn);
-    }
+
+  h2 {
+    font-size: 4vh;
   }
-  
-  #preloader.hidden {
-    display: none;
-  }
-  
-  .custom-loader {
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    border:8px solid;
-    border-color:#ffffff;
-    border-right-color: #FFC800;
-    animation:s2 1s infinite linear;
-  }
-  @keyframes s2 {to{transform: rotate(1turn)}}
+}

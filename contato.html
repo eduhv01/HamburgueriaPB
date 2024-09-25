@@ -1,16 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContatoPB</title>
     <link rel="stylesheet" href="/assets/css/contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div id="preloader">
         <div class="custom-loader"></div>
     </div>
 
+    <nav class="navbar">
+        <a href="telaInicial.html"><img id="logo" src="assets/img/th-removebg-preview.png" alt=""></a>
+        <div class="menu-items">
+            <h2 id="inicial"><a href="telaInicial.html">Ínicio</a></h2>
+            <h2><a href="#">Cardápio</a></h2>
+            <h2 id="contato"><a href="contato.html">Contato</a></h2>
+        </div>
+    </nav>
+
+    <main class="minhaTela">
+        <main class="contatos">
+            <h1 id="h1Contato">CONTATE-NOS</h1>
+            <h2 id="h2Numero">Número
+                <a href="tel:+5583986715415"><i class="fa-solid fa-phone-volume icon" style="color: #ffffff;"></i><a>
+            </h2>
+            <p id="numero">+55(83)986715415</p>
+
+            <h2 id="h2Endereco">Endereço
+                <i class="fa-solid fa-location-dot icon" style="color: #ffffff;"></i>
+            </h2>
+
+            <p id="endereco">Rua da Aborborada, 221</p>
+
+            <h2 id="h2Horarios">Horários de <br> Funcionamento
+                <i class="fa-solid fa-clock icon" style="color: #ffffff;"></i>
+            </h2>
+
+            <p id="horario1">Seg - Sex 17h-23:30</p>
+            <p id="horario2">Sab - Dom 17h-01:00</p>
+        </main>
+
+        <article class="form-container">
+            <form id="formContato" action="#" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="digite seu email" required>
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="digite seu nome" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="digite sua mensagem" required></textarea>
+
+                <div>
+                    <label id="type">Tipo de Avaliação:</label><br>
+                    <div class="opcoes-avaliacao">
+                        <label for="elogio">Elogio</label>
+                        <input type="radio" class="radioOpcao" name="tipo" value="elogio" required>
+                        
+                        <label id="critica" for="critica">Crítica</label>
+                        <input type="radio" class="radioOpcao" name="tipo" value="critica" required>
+                    </div>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="mensagemDeAgradecimento" style="display:none;"></div>
+        </article>
+            
+    </main>
+
     <script src="/assets/js/contato.js"></script>
 </body>
+
 </html>
