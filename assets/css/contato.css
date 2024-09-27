@@ -36,6 +36,7 @@
   border-right-color: #ffc800;
   animation: s2 1s infinite linear;
 }
+
 @keyframes s2 {
   to {
     transform: rotate(1turn);
@@ -78,14 +79,11 @@ h2 {
   color: white;
 }
 
-#inicial {
-  text-decoration: underline;
-}
-
 #contato {
   background-color: #ffc800;
   border-radius: 20px;
   padding: 0px 13px 0px 10px;
+  text-decoration: underline;
 }
 
 a {
@@ -95,10 +93,10 @@ a {
 
 .contatos {
   color: white;
-    font-family: "Krona One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    padding-left: 43px;
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-left: 43px;
 }
 
 #h1Contato {
@@ -143,15 +141,15 @@ a {
 }
 
 .icon {
-  margin-right: 10px; 
-  vertical-align: middle; 
-  font-size: 0.9em; 
-  opacity: 0.8; 
+  margin-right: 10px;
+  vertical-align: middle;
+  font-size: 0.9em;
+  opacity: 0.8;
 }
 
 .icon:hover {
-  opacity: 2; 
-  transition: opacity 0.2s ease; 
+  opacity: 2;
+  transition: opacity 0.2s ease;
 }
 
 .minhaTela {
@@ -160,14 +158,14 @@ a {
 
 .form-container {
   margin-top: 42px;
-  margin-left: 22em;
+  margin-left: 24em;
   flex-direction: column;
   width: 30em;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.137);
   padding: 10px 20px 10px 20px;
   border-radius: 7px;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); 
-  z-index: 1000; 
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 form {
@@ -179,10 +177,11 @@ label {
   margin-bottom: 10px;
   font-family: "Krona One", sans-serif;
   font-size: 1.2em;
-  color: #000;
+  color: #ffffff;
 }
 
-input, textarea {
+input,
+textarea {
   margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -213,12 +212,12 @@ button:hover {
 }
 
 #mensagemDeAgradecimento {
-  color: #ca0000;
+  color: #ffffff;
 }
 
 .opcoes-avaliacao {
-    display: flex; 
-    margin-top: 10px;
+  display: flex;
+  margin-top: 10px;
 }
 
 #critica {
@@ -230,12 +229,12 @@ button:hover {
   margin-left: 10px;
 }
 
-@media (max-width: 450px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
 
   body {
     background-image: url(/assets/img/Wallpaper\ computadores.png);
     background-repeat: no-repeat;
-    background-size: 100em 100em;
+    background-size: cover;
     background-attachment: fixed;
   }
 
@@ -248,20 +247,90 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 10px 0;
+    padding: 5px;
+    text-align: center;
   }
 
   .menu-items {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    font-size: 1rem;
+    font-size: 50px;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
     align-items: center;
+    margin-top: 0.5vh;
+    text-align: center;
+  }
+
+  .menu-items h2:nth-child(1),
+  .menu-items h2:nth-child(2) {
+    width: 40%;
+  }
+
+  .menu-items h2:nth-child(3) {
+    margin-top: 11px;
+    width: 50%;
   }
 
   h2 {
-    font-size: 4vh;
+    font-size: 30px;
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #h1Contato {
+    padding-top: 20px;
+  }
+
+  #h2Numero {
+    padding-right: 40px;
+
+  }
+
+  #h2Endereco {
+    padding-right: 28px;
+
+  }
+
+  #numero {
+    font-size: 1.2em;
+  }
+
+  #endereco {
+    font-size: 1.2em;
+  }
+
+  #h2Horario {
+    padding-right: 50px;
+
+  }
+
+  #horario1 {
+    font-size: 1.3em;
+  }
+
+  #horario {
+    font-size: 1.3em;
+  }
+
+  #horario2 {
+    font-size: 1.3em;
+  }
+
+  .form-container {
+    margin: 28px;
+    width: 21em;
+    background-color: rgba(255, 255, 255, 0.137);
+    padding: 10px 20px 10px 20px;
+    border-radius: 7px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .minhaTela {
+    display: block;
   }
 }
